@@ -1,0 +1,2088 @@
+PROGRAMMING IN C++
+http://way2cplusplus.blogspot.in/
+
+
+//binary search
+#include <iostream.h>
+#include <conio.h>
+void main()
+{  clrscr();
+   int c, first, last, middle, n, search, array[100];
+   cout<<"Program for Binary Search by-Tarun Rawat\n";
+   cout<<"\nEnter number of elements : ";
+   cin>>n;
+   cout<<"Enter "<<n<<" integers \n";
+   for ( c = 0 ; c < n ; c++ )
+  cin>>array[c];
+
+   cout<<"\nEnter value to find it's location\n";
+   cin>>search;
+   first = 0;
+   last = n - 1;
+   middle = (first+last)/2;
+   while( first <= last )
+   { if ( array[middle] < search )
+  first = middle + 1;
+      else if ( array[middle] == search )
+      {
+  cout<<search<<" found at location "<< middle+1;
+  break;
+      }
+      else
+  last = middle - 1;
+  middle = (first + last)/2;
+   }
+//check alphabet is vowel or not
+
+#include <iostream.h>
+#include<conio.h>
+void main()
+{ clrscr();
+  cout<<"Program To Check Vowel by-Tarun Rawat \n";
+  char ch;
+  cout<<"\nInput a character: ";
+  cin>>ch;
+  switch(ch)
+  { case 'a':  case 'A':
+    case 'e':  case 'E':
+    case 'i':  case 'I':
+    case 'o':  case 'O':
+    case 'u':  case 'U':
+      cout<<"\n"<<ch<<" is a Vowel";
+      break;
+    default:cout<<"\n"<<ch<<" is not a Vowel";
+  }
+getch();
+
+}
+
+//count no.of vowels
+
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+ char ch[20];
+ int i,count=0;
+ clrscr();
+ cout<<"Prgram to count number of vowels by-Tarun Rawat\n";
+ cout<<"Enter the string\n";
+ gets(ch);
+ for(i=0;ch[i]!='\0';i++)
+ {
+  if(ch[i]=='a' || ch[i]=='e' || ch[i]=='i' || ch[i]=='o' ||
+   ch[i]=='u')
+  {
+   count++;
+  }
+ }
+ cout<<"Vowels = "<<count;
+ getch();
+}
+
+//sum of even and odd no.
+#include<iostream.h>
+#include<conio.h>
+void main()
+ { clrscr();
+   int i,a,b,even,odd; even=odd=0;
+   cout<<"Sum of even and odd no. (by:Tarun Rawat)\n\n";
+   cout<<"Enter starting no. = ";
+   cin>>a;
+   cout<<"\nEnter last no.     = ";
+   cin>>b;
+   for (i=a;i<=b;i++)
+  { if(i%2==0)
+    even =even+i ;
+    else{odd =odd+i;}
+  }
+  cout<<"\nsum of even no. is = "<<even<<"\n"<<"sum of odd  no. is = "<<odd;
+ getch();
+ }
+
+//multiplication table
+#include<iostream.h>
+#include<conio.h>
+void main()
+ { clrscr();
+   int n;
+   cout<<"Print Table Of any no. (by: Tarun Rawat)\n\n";
+   cout<<"Enter number to print it's table = ";
+   cin>>n;
+   for(int i=1;i<=20;i++)
+     {cout<<"\n"<<n<<"*"<<i<<" =  "<<n*i;
+     }
+ getch();
+ }
+
+//check a no.is prime or not
+
+#include<iostream.h>
+#include<conio.h>
+void main()
+{ clrscr();
+   int num, i,count=0;
+   cout<<"Program to check no. is Prime (by: Tarun Rawat)\n\n";
+   cout<<"Enter number to check Prime or not :- ";
+   cin>>num;
+   for(i=2;i<=num;i++)
+     { if(num%i==0)
+   count=count+1;
+     }
+     if(count==1)
+       cout<<"\n"<<num<<" is a Prime number";
+     else cout<<"\n"<<num<<" is not a prime number";
+getch();
+}
+//reverse of a no.
+#include<iostream.h>
+#include<conio.h>
+void main()
+{ clrscr();
+  int n,a,b,c,d;
+  cout<<"Reverse Traversal by Tarun Rawat\n";
+  cout<<"Enter four digit number \n";
+  cin>>n;
+  if(n!=0)
+   { a=n%10;
+     b=n/10%10;
+     c=n/100%10;
+     d=n/1000%10;
+     cout<<a<<b<<c<<d;
+   }
+getch();
+}
+//prime series upto n
+
+#include<iostream.h>
+#include<conio.h>
+void main()
+{clrscr();
+ int n,count=0;
+ cout<<"PRIME NO. SERIES by-Tarun Rawat\n";
+ cout<<"\nINPUT THE VALUE OF N: " ;
+ cin>>n;
+ cout<<"\nTHE PRIME NO. SERIES B/W 1 TO"<<n<<"\n";
+ for(int i=1;i<=n;i++)
+   {for(int j=1;j<=i;j++)
+  { if(i%j==0)
+       count++;
+  }
+ if (count==1||count==2)
+    cout<<i<<" ";
+    count=0;
+   }
+getch();
+}
+
+//power of no.
+#include<iostream.h>
+#include<conio.h>
+#include<math.h>
+void main()
+{clrscr();
+double no,r,res;
+cout<<"Enter Number : ";
+cin>>no;
+cout<<"Enter raised/power : ";
+cin>>r;
+res=pow(no,r);
+cout<<"\nResult is "<< res;
+getch ();
+}
+//pallindrome no
+#include<iostream.h>
+#include<conio.h>
+void main()
+{  clrscr();
+   int n, reverse = 0, temp;
+   cout<<"Program to check Palindrome Condition by-Tarun Rawat\n";
+   cout<<"\nEnter a number :";
+   cin>>n;
+   temp=n;
+   while( temp != 0 )
+     {reverse = reverse * 10;
+      reverse = reverse + temp%10;
+      temp = temp/10;
+     }
+   if(n==reverse)
+      cout<<"\n"<<n<<" is a palindrome number.\n";
+   else
+      cout<<"\n"<<n<<" is not a palindrome number.\n";
+getch();
+
+}
+//swapno
+
+#include<iostream.h>
+#include<conio.h> 
+void main()
+{clrscr();
+ int a,b,temp=0;
+ cout<<"Program to swap two number by-Tarun Rawat\n\n";
+ cout<<"Enter first number (let a)  : ";
+ cin>>a;
+ cout<<"\nEnter second number (let b) : ";
+ cin>>b;
+ temp=a;
+ a=b;
+ b=temp;
+ cout<<"\nAfter swap :- ";
+ cout<<"\n\t\tValue of a is : "<<a<<"\n\n\t\tValue of b is : "<<b;
+getch();
+}
+
+//HCF calculation
+
+#include<iostream.h>
+#include<conio.h>
+void main()
+{   clrscr();
+    int num1,num2;
+    cout<<" Find HCF of two number by-Tarun Rawat\n\n";
+    cout<<"Enter first number : ";
+    cin>>num1;
+    cout<<"Enter second number : ";
+    cin>>num2;
+    cout<<"HCF of "<<num1<<" & "<<num2<<" is : ";
+    while(num1!=num2)
+    {if(num1>num2)
+        num1-=num2;
+    else num2-=num1;
+    }
+    cout<<num1;
+    getch();
+}
+
+//count no.of digits
+
+#include<iostream.h>
+#include<conio.h>
+void main()
+{   clrscr();
+    long int num1,count=0;
+    cout<<"count number of digits in a number  by-Tarun Rawat\n\n";
+    cout<<"Enter number to count it's Digit : ";
+    cin>>num1;
+    while(num1!=0)
+    {num1=num1/10;
+     count++;
+    }
+    cout<<"Number of Digit is : "<<count;
+getch();
+}
+
+//average of no in array
+#include <iostream.h>
+#include <conio.h>
+int main()
+{   clrscr();
+    int n, i;
+    float num[100], sum=0.0, average;
+    cout<<"Program to calculate Average using array by-Tarun Rawat\n\n";
+    cout<<"Enter the numbers of data : ";
+    cin>>n;
+    while (n>100 || n<=0)
+    {   cout<<"Error! number should in range of (1 to 100).\n";
+    cout<<"Enter the number again : ";
+    cin>>n;
+    }
+   for(i=0; i<n; ++i)
+   {
+      cout<<i+1<<" Enter number : ";
+      cin>>num[i];
+      sum+=num[i];
+   }
+   average=sum/n;
+   cout<<"Average = "<<average;
+getch();
+}
+
+//Armstrong no
+#include<iostream.h>
+#include<conio.h>
+void main()
+{ clrscr();
+  int temp,num,sum=0,r;
+  cout<<"Program to check Armstrong condition by-Tarun Rawat\n\n";
+  cout<<"Enter a number : ";
+  cin>>num;
+  temp=num;
+  while(num!=0)
+       {r=num%10;
+       num=num/10;
+       sum=sum+(r*r*r);
+       }
+  if(sum==temp)
+    cout<<endl<<temp<<" is a Armstrong number. \n";
+  else cout<<endl<<temp<<" is not a Armstrong number./n";
+getch();
+}
+
+//calculate npr,ncr
+#include<iostream.h>
+#include<conio.h>
+long fnpr(int, int);
+long fncr(int, int);
+long factorial(int);
+void main()
+{
+ int n, r;
+ long ncr, npr;
+ clrscr();
+ cout<<"Calculate nCr & nPr by-Tarun Rawat\n";
+ cout<<"\nEnter the value of n : ";
+ cin>>n;
+ cout<<"Enter the value of r : ";
+ cin>>r;
+ ncr=fncr(n,r);
+ npr=fnpr(n,r);
+ cout<<"\nValue of "<<n<<"C"<<r<<" = "<<ncr;
+ cout<<"\nValue of "n<<"P"<<r<<" = "<<npr;
+ getch();
+}
+long fnpr(int n,int r)
+{
+ long value;
+ value=factorial(n)/factorial(n-r);
+ return value;
+}
+long fncr(int n,int r)
+{
+ long value;
+ value=factorial(n)/(factorial(r)*factorial(n-r));
+ return value;
+}
+long factorial(int n)
+{
+ if(n==0)
+   return 1;
+ else
+ {
+ return(n*factorial(n-1));
+ }
+}
+
+//convert binary to decimal and viceversa
+#include <iostream.h>
+#include <conio.h>
+#include <math.h>
+int binary_decimal(int n);
+int decimal_binary(int n);
+int main()
+{  clrscr();
+   int n;
+   char c;
+   cout<<"Convet Decimal to Binary & vice versa by-Tarun Rawat\n\n";
+   cout<<"1. Enter alphabet 'd' to convert binary to decimal.\n";
+   cout<<"2. Enter alphabet 'b' to convert decimal to binary.\n";
+   cin>>c;
+   if (c =='d' || c == 'D')
+   {   cout<<"\nEnter a binary number : ";
+       cin>>n;
+       cout<<n<<" in binary = "<<binary_decimal(n)<<" in decimal";
+   }
+   if (c =='b' || c == 'B')
+   {   cout<<"\nEnter a decimal number : ";
+       cin>>n;
+       cout<<n<<" in decimal = "<<decimal_binary(n)<<" in binary";
+   }
+getch();
+}
+
+int decimal_binary(int n)  /* Function to convert decimal to binary.*/
+{   int rem, i=1, binary=0;
+    while (n!=0)
+    {   rem=n%2;
+    n/=2;
+    binary+=rem*i;
+    i*=10;
+    }
+    return binary;
+}
+
+int binary_decimal(int n) /* Function to convert binary to decimal.*/
+{  int decimal=0, i=0, rem;
+    while (n!=0)
+    {   rem = n%10;
+    n/=10;
+    decimal += rem*pow(2,i);
+    ++i;
+    }
+    return decimal;
+}
+// mathematical operation like sqrt,cos sin...
+#include<iostream.h>
+#include<conio.h>
+#include<math.h>
+void main()
+{clrscr();
+ int choice;double arg,arg1,arg2,arg3,num,num1,num2;
+ cout<<"Mathematical Operation by-Tarun Rawat\n";again:
+ cout<<"\n1=exp   (eg:e^2)\n2=log   (eg:log(1))";
+ cout<<"\n3=log10 (eg:log10(1))\n4=sqrt  (eg:sqrt(81))\n5=sin\n6=cos\n7=tan\n";
+ cout<<"\nEnter cHOICE: ";
+ cin>>choice;
+ switch(choice)
+ {case 1: cout<<"\nEnter power of e :";
+   cin>>arg;
+   cout<<"\nValue is: "<<exp(arg);break;
+  case 2: cout<<"\nEnter value of log :";
+   cin>>num;
+   cout<<"\nValue is: "<<log(num);break;
+  case 3: cout<<"\nEnter value of log10 :";
+   cin>>num1;
+   cout<<"\nValue is: "<<log10(num1);break;
+  case 4: cout<<"\nEnter value for sqrt :";
+   cin>>num2;
+   cout<<"\nValue is: "<<sqrt(num2);break;
+  case 5: cout<<"\nEnter value of sin in radian :";
+   cin>>arg1;
+   cout<<"\nValue is: "<<sin(arg1);break;
+  case 6: cout<<"\nEnter value of cos in radian :";
+   cin>>arg2;
+   cout<<"\nValue is: "<<cos(arg2);break;
+  case 7: cout<<"\nEnter value of tan in radian :";
+   cin>>arg3;
+   cout<<"\nValue is: "<<tan(arg3);break;
+  default:cout<<"\nWrong Choice\n";goto again;
+}
+getch();
+}
+
+
+
+// calculate root of quartic equation
+
+#include<conio.h>
+#include<iostream.h>
+#include<math.h>
+void main()
+{clrscr();
+ cout<<"Program to Print Roots of Quadrtic Equation  By Tarun Rawat \n";
+ float a,b,c,root1,root2,delta;
+ cout<<"Enter three constant a,b & c of ax^2 + bx + c \n";
+ cin>>a>>b>>c;
+ if(a==0)
+    cout<<"value of a not be zero ";
+ else{ delta=b*b-4*a*c;
+       if  (delta>0)
+    { root1= (-b+sqrt(delta))/(2*a);
+      root2= (-b-sqrt(delta))/(2*a);
+      cout<<"Roots are Real and Unequal\n";
+      cout<<"Root1= "<<root1<<"\nRoot2= "<<root2;
+    }
+       else{ if(delta==0)
+        { root1=-b/(2*a);
+   cout<<"Roots are Real & Equal\n";
+   cout<<"Root1= "<<root1<<"\nRoot2= "<<root2;
+        }
+      else cout<<"Roots are Complex and Imaginary \n";
+    }
+getch();
+}
+
+//mathematical operation 
+
+#include<iostream.h>
+#include<conio.h>
+void main()
+{ clrscr();
+  float a,b,add,sub,mul,div,choice;
+  cout<<"Mathematical Operation  By   TARUN RAWAT  \n";
+  cout<<"\nEnter Two Values for operation \n "; cin>>a>>b;
+  cout<<"Enter your choice (type 1,2,3,4) \n";
+  cout<< " 1 - Addition \n 2 - Subtract \n 3 - Division \n 4 - Multiply \n";
+  cin>>choice;
+  if(choice==1)
+    { add =a+b;  cout<<"\n Addition is "<<add;}
+  if(choice==2)
+    { sub=a-b;   cout<<"\n Subtraction is "<<sub;}
+  if(choice==3)
+    { div=a/b;   cout<<"\n Division is "<<div;}
+  if(choice==4)
+    { mul=a*b;   cout<<"\n Multiplication is "<<mul;}
+getch();
+}
+
+//calculate sum of AP
+#include<iostream.h>
+#include<conio.h>
+#include<math.h>
+void main()
+{
+ int a,d,n,i,nth;
+ int sum=0;
+ clrscr();
+ cout<<"Program to Calculate sum of A.P series by-Tarun Rawat\n";
+ cout<<"\nEnter the first number of the series : ";
+ cin>>a;
+ cout<<"\nEnter the number of terms in series : ";
+ cin>>n;
+ cout<<"\nEnter the common difference of series : ";
+ cin>>d;
+ sum=(n*(2*a+(n-1)*d))/2;
+ nth=a+(n-1)*d;
+ cout<<"\nSum of the A.P. is : ";
+ for(i=a;i<=nth;i=i+d)
+ {
+  if(i!=nth)
+  {
+    cout<<i<<" + ";
+  }
+  else
+  {
+    cout<<i<<" = "<<sum;
+  }
+ }
+ getch();
+}
+
+// calculate sum of 1+2+3+4....
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+ int n,i;
+ int sum=0;
+ clrscr();
+ cout<<"Program to calculatesum 1+2+3+...n by-Tarun Rawat\n";
+ cout<<"\nEnter the value of n : ";
+ cin>>n;
+ sum=(n*(n+1))/2;
+ cout<<"\nSum of the series: ";
+ for(i=1;i<=n;i++)
+ {
+  if (i!=n)
+  {
+    cout<<i<<" + ";
+  }
+  else
+  {
+    cout<<i<<" =  "<<sum;
+  }
+ }
+ getch();
+}
+
+//Transpose matrix
+
+#include<iostream.h>
+#include<conio.h>
+
+void main()
+{clrscr();
+ int a[10][10],b[10][10],i,j,m,n;
+ cout<<"Program for Transpose of Matrix by-Tarun Rawat\n\n";
+ cout<<"Enter number of row in matrix    : ";
+ cin>>m;
+ cout<<"Enter number of column in matrix : ";
+ cin>>n;
+ cout<<"\nEnter elements in an matrix : ";
+
+ for(i=0;i<m;i++)
+    {for(j=0;j<n;j++)
+    {cin>>a[i][j];
+    }
+    }
+ cout<<"\nInput matrix : \n";
+  for(i=0;i<m;i++)
+    {for(j=0;j<n;j++)
+    {cout<<a[i][j]<<" ";
+    }
+     cout<<"\n";
+    }
+
+  for(i=0;i<m;i++)
+    {for(j=0;j<n;j++)
+    {b[i][j]=a[j][i];
+    }
+    }
+  cout<<"\nTranspose matrix : \n";
+  for(i=0;i<m;i++)
+    {for(j=0;j<n;j++)
+    {cout<<b[i][j]<<" ";
+    }
+     cout<<"\n";
+    }
+getch();
+}
+//check no is even or odd
+#include<iostream.h>
+#include<conio.h>
+void main()
+{clrscr();
+ int a;
+ cout<<"Check Number is Even or Odd by-Tarun Rawar\n";
+ cout<<"\nEnter number to  check : ";
+ cin>>a;
+ if(a%2==0)
+  cout<<"\n"<<a<<" is a Even number ";
+ else cout<<"\n"<<a<<" is a Odd number ";
+getch();
+}
+//check a year is leap or not
+#include<iostream.h>
+#include<conio.h>
+void main()
+{ clrscr();
+  int year;
+  cout<<"Program to check Leap year by-Tarun Rawat\n";
+  cout<<"Enter a year to check : ";
+  cin>>year;
+  if ( year%400 == 0)
+    cout<<year<<" is a leap year\n";
+  else if ( year%100 == 0)
+    cout<<year<<" is not a leap year\n";
+  else if ( year%4 == 0 )
+    cout<<year<<" is a leap year\n";
+  else
+    cout<<year<<" is not a leap year\n";
+getch();
+
+}
+//matrix in c++
+#include<iostream.h>
+#include<conio.h>
+void main()
+{ clrscr();
+  int a[10][10],b[10][10],c[10][10],l,m,n,o,i,j,k;
+  cout<<"Matrix Multiplication by-Tarun Rawat\n";
+  again:
+  cout<<"\nEnter Row & Column Of Matrix A \n";
+  cin>>l>>m;
+  cout<<"\nEnter Row & Column Of Matrix B \n";
+  cin>>n>>o;
+  if(m==n)
+   {cout<<"Matrix Can Be Multiply \n";
+   }
+  else{ cout<<"Incorrect Matrix For Multiplication \n";
+       goto again;
+       }
+  cout<<"\nEnter Elements Of Matrix A: \n";
+  for(i=0;i<l;i++)
+     { for(j=0;j<m;j++)
+   {cin>>a[i][j];
+   }
+     }
+  cout<<"\nEnter Elements Of Matrix B: \n";
+    for(i=0;i<n;i++)
+       { for(j=0;j<o;j++)
+     {cin>>b[i][j];
+     }
+       }
+    for(i=0;i<l;i++)
+       {for(j=0;j<o;j++)
+    {c[i][j]=0;
+       for(k=0;k<m;k++)
+    {c[i][j]=c[i][j]+(a[i][k]*b[k][j]);
+    }
+    }
+       }
+   cout<<"\nMultiplication Of Matrix A & B:  ";
+   for(i=0;i<l;i++)
+      {cout<<"\n";
+  for(j=0;j<o;j++)
+     { cout<<c[i][j]<<"  ";
+     }
+      }
+getch();
+
+}
+//swap using pointer
+
+#include<iostream.h>
+#include<conio.h>
+void swap(int *x,int *y);
+void main()
+{clrscr();
+ int a,b;
+ cout<<"\tThe program for Swapping using pointers by-VARUN KUMAR\n";
+ cout<<"Enter First Value : ";
+ cin>>a;
+ cout<<"Enter Second Value: ";
+ cin>>b;
+ swap(&a,&b);
+ cout<<"\nSwapped Values\n";
+ cout<<"a="<<a<<"and b="<<b<<"\n";
+ getch();
+}
+void swap(int *x,int *y)
+{int temp;
+ temp=*x;
+ *x=*y;
+*y=temp;
+}
+   if ( first > last )
+      cout<<"Not found! "<<search<<"  is not present in the list.\n";
+getch();
+}
+
+//linera search
+#include <iostream.h>
+#include <conio.h>
+void main()
+{  clrscr();
+   int array[100], search, c, n;
+   cout<<"Program for Linear Search by-Tarun Rawat\n";
+   cout<<"Enter the number of elements in array :";
+   cin>>n;
+   cout<<"Enter "<<n<<" integer\n";
+   for (c = 0; c < n; c++)
+      cin>>array[c];
+   cout<<"Enter the number to search\n";
+   cin>>search;
+   for (c = 0; c < n; c++)
+   { if (array[c] == search)     /* if required element found */
+      {  cout<<search<<" is present at location "<< c+1;
+      }
+   }
+   if (c == n)
+      cout<<search<<" is not present in array.\n";
+getch();
+
+}
+
+//square matrix addition and substraction
+#include<iostream.h>
+#include<conio.h>
+void main()
+ { clrscr();
+   int i,j,r,c,choice;
+   int matrix1[5][5];
+   int matrix2[5][5];
+   int sum[5][5],sub[5][5];
+   cout<<"Square Matrix Addition & Subtraction by-Tarun Rawat\n";
+   cout<<"Enter Row & Column  = ";cin>>r>>c;
+   cout<<"Enter matrix 1st \n";
+   for (i=0;i<r;i++)
+       {for (j=0;j<c;j++)
+     {cin>>matrix1[i][j];
+     }
+       }
+    cout<<"Entered Matrix is\n";
+    for (i=0;i<r;i++)
+  {for (j=0;j<c;j++)
+     {cout<<matrix1[i][j]<<" ";
+     }cout<<"\n";
+  }
+   cout<<"\nEnter matrix 2nd \n";
+   for (i=0;i<r;i++)
+       { for (j=0;j<c;j++)
+      {cin>>matrix2[i][j];
+      }
+       }
+   cout<<"Entered matrix is\n";
+   for (i=0;i<r;i++)
+       { for (j=0;j<c;j++)
+      {cout<<matrix2[i][j]<<" ";
+      }cout<<"\n";
+       }
+   cout<<"\nEnter Choice: 1 = Addition 2 = Subtraction\n";
+   cin>>choice;
+   if(choice==1)
+     {  cout<<"Addition of matrix \n";
+ for (i=0;i<r;i++)
+   { for (j=0;j<c;j++)
+      { sum[i][j]=matrix1[i][j]+matrix2[i][j];
+      cout<<sum[i][j]<<" ";
+      }cout<<"\n";
+   }
+     }
+   if(choice==2)
+    {  cout<<"Subtraction of matrix \n";
+       for (i=0;i<r;i++)
+   { for (j=0;j<c;j++)
+      { sub[i][j]=matrix1[i][j]-matrix2[i][j];
+      cout<<sub[i][j]<<" ";
+      }cout<<"\n";
+   }
+     }
+getch();
+
+}
+
+//quicksort
+
+#include<iostream.h>
+#include<conio.h>
+void quicksort(int*,int,int);
+int partion(int*,int,int);
+void main()
+{clrscr();
+ cout<<"Enter ten number for quick sort by-Tarun rawat:\n\n";
+
+ int a[10];
+ for(int i=0;i<10;i++)
+ {cin>>a[i];
+ }
+ int p=0,q=9;
+ quicksort(a,p,q);
+ cout<<"After applying quick sort :\n";
+ for(i=0;i<10;i++)
+ {cout<<a[i]<<" ";
+ }
+ getch();
+}
+
+void quicksort(int a[],int p,int q)
+{ if(p<q)
+  {int r=partion(a,p,q);
+  quicksort(a,p,r-1);
+  quicksort(a,r+1,q);
+  }
+}
+
+int partion(int a[],int p,int q)
+{ int x=a[p];
+  int i=p;int temp;
+  for(int j=p+1;j<=q;j++)
+     { if(a[j]<= x)
+     {i=i+1;
+           temp=a[i];
+           a[i]=a[j];
+           a[j]=temp;
+     }
+     }
+   temp=a[p];
+   a[p]=a[i];
+   a[i]=temp;
+   return i;
+}
+
+//heapsort
+
+#include<iostream.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<math.h>
+#define MAXSIZE RAND_MAX
+
+
+void MAX_HEAPIFY(int *A, int i, int n);
+void BUILD_MAX_HEAP(int *A, int n);
+void HEAP_SORT(int *A, int n);
+int RECURSIVE_BINARY_SEARCH(int *A, int s,int e, int key)
+{
+int mid=ceil((s+e)/2);
+if(A[mid]==key)
+{
+return mid;
+}
+if(s>=e)
+{
+return -1;
+}
+if(A[mid]>key)
+{
+return RECURSIVE_BINARY_SEARCH(A,s,mid-1,key);
+}
+else
+{
+return RECURSIVE_BINARY_SEARCH(A,mid+1,e,key);
+}
+}
+
+
+//function to get a random number between 1 and max
+int GetRandom(int max)
+{
+return rand()%max +1;
+}
+//create an input array of size n by assigning random integers
+//from 1 to n at each location
+int* createRandomInput(int n)
+{
+int *A= new int[n];
+for(int i=0;i<n;i++){
+A[i]=GetRandom(n);
+}
+return(A);
+}
+void MAX_HEAPIFY(int *A,int i,int n)
+{
+int l,r,largest=i,x;
+l=2*(i+1) -1;
+r=2*(i+1);
+if((l<n)&& (A[l]>A[i]))
+largest=l;
+if(r<n && A[r]>A[largest])
+largest=r;
+if(largest!=i)
+{
+x=A[i];
+A[i]=A[largest];
+A[largest]=x;
+MAX_HEAPIFY(A,largest,n);
+}
+}
+
+void BUILD_MAX_HEAP(int *A,int n)
+{
+int i;
+for(i=n/2;i>=0;i--)
+{
+MAX_HEAPIFY(A,i,n);
+}
+}
+
+void HEAP_SORT(int *A,int n)
+{
+int i,x;
+for(i=0;i<=n-1;i++)
+{
+x=A[0];
+A[0]=A[n-i-1];
+A[n-i-1]=x;
+
+MAX_HEAPIFY(A,0,n-i-1);
+}
+}
+void main()
+{
+int n,*A;
+clrscr();
+cout<<"Program for HEAP SORT (using random input array)by-Tarun rawat\n\n ";
+//take size of input from user between 1 and maxsize
+//check for correctness
+n=0;
+while(n<=0 || n>MAXSIZE)
+{
+cout<<"Please define input size between 1 and "<<MAXSIZE<<":";
+cin>>n;
+}
+//create random array
+A=createRandomInput(n);
+//Note-This is for our test for now.
+//right now
+//output array to the user
+for(int i=0;i<n;i++)
+{
+cout<<A[i]<<",";
+}
+cout<<"\n";
+BUILD_MAX_HEAP(A,n);
+HEAP_SORT(A,n);
+for(i=0;i<n;i++)
+{
+cout<<A[i]<<",";
+}
+int key;
+cout<<"\n enter the element to be searched:";
+cin>>key;
+int loc=RECURSIVE_BINARY_SEARCH(A,0,n-1,key);
+cout<<"\nthe element found at:"<< loc;
+if(loc!=-1)
+{
+cout<<"\nelement found is:"<<key;
+}
+else
+{
+cout<<"\nelement not found ";
+}
+getch();
+}
+//selection sort
+#include <iostream.h>
+#include <conio.h>
+void main()
+{  clrscr();
+   int array[100], n, c, d, position, swap;
+   cout<<"Program for Selection Sort by-Tarun Rawat\n";
+   cout<<"\nEnter number of elements : ";
+   cin>>n;
+   cout<<"Enter "<<n<<" integers\n";
+   for ( c = 0 ; c < n ; c++ )
+      cin>>array[c];
+   for ( c = 0 ; c < ( n - 1 ) ; c++ )
+   {   position = c;
+       for ( d = c + 1 ; d < n ; d++ )
+      {  if ( array[position] > array[d] )
+     position = d;
+      }
+      if ( position != c )
+      {  swap = array[c];
+  array[c] = array[position];
+  array[position] = swap;
+      }
+   }
+
+   cout<<"\nSorted list in Ascending order:\n";
+
+   for ( c = 0 ; c < n ; c++ )
+ cout<<array[c]<<"\t";
+getch();
+}
+
+//insert sort
+
+#include<iostream.h>
+#include<conio.h>
+void main()
+{clrscr();
+int a[10],i,j,n,key;
+cout<<"\Program for Insertion Sort by-Tarun Rawat\n";
+cout<<"\nEnter Total Elements: "; cin>>n;
+cout<<"\nEnter elements: \n";
+for(i=0;i<n;i++)
+ {cin>>a[i];
+ }
+for(j=1;j<n;j++)
+   {key=a[j];
+    i=j-1;
+    while(i>=0 && a[i]>key)
+       {a[i+1]=a[i];
+ i=i-1;
+       } a[i+1]=key;
+   }
+for(i=0;i<n;i++)
+ {cout<<a[i]<<" ";
+ }getch();
+
+}
+
+//queue using array
+
+#include<iostream.h>
+#include<conio.h> 
+int queue[100],front=-1,rear=-1,max;
+void insert_element();
+void delete_element();
+void display_queue();
+
+void main()
+{ clrscr();
+  int option;
+  cout<<"Implement Queue operations by-Tarun Rawat\n\n";
+  cout<<"Enter the size of Queue : ";
+  cin>>max;
+  do
+  {cout<<"1.Insert an element";
+   cout<<"\n2.Delete an element";
+   cout<<"\n3.Display queue";
+   cout<<"\n4.Exit";
+   cout<<"\nEnter your choice : ";
+   cin>>option;
+   switch(option)
+   { case 1: insert_element();
+          break;
+     case 2: delete_element();
+         break;
+     case 3: display_queue();
+         break;
+     case 4: return 0;
+   }
+ }while(option!=4);
+getch();
+}
+
+void insert_element()
+{
+  int num;
+  cout<<"\nEnter the item to be inserted : ";
+  cin>>num;
+  if(front==0 && rear==max-1)
+    cout<<"\nQueue OverFlow Occured\n";
+  else if(front==-1&&rear==-1)
+  {
+      front=rear=0;
+      queue[rear]=num;
+
+  }
+  else if(rear==max-1 && front!=0)
+  {
+    rear=0;
+    queue[rear]=num;
+  }
+  else
+  {
+      rear++;
+      queue[rear]=num;
+  }
+}
+void delete_element()
+{
+  int element;
+  if(front==-1)
+  {
+      cout<<"\nUnderflow\n";
+  }
+  element=queue[front];
+  if(front==rear)
+     front=rear=-1;
+  else
+  {
+    if(front==max-1)
+      front=0;
+    else
+      front++;
+       cout<<"\nThe deleted element is : "<<element;
+  }
+
+}
+void display_queue()
+{
+    int i;
+    if(front==-1)
+      cout<<"\nNo elements to display";
+    else
+    {
+      cout<<"\nThe queue elements are :\n";
+      for(i=front;i<=rear;i++)
+      {
+      cout<<"\t"<<queue[i];
+      }
+    }
+}
+
+//stack using array
+
+#include<iostream.h>
+#include<conio.h>
+int stack[20],top=-1; //global declaration
+void push();
+void pop();
+void display();
+void main()
+{ clrscr();
+  int ch;
+  cout<<"Program for Stack Operations by-Tarun Rawat\n\n";
+  do
+  {   cout<<"\n1.Push";
+      cout<<"\n2.Pop";
+      cout<<"\n3.Display";
+      cout<<"\n4.Exit";
+      cout<<"\nEnter your choice : ";
+      cin>>ch;
+      if(ch==1)
+    push();
+      else if(ch==2)
+    pop();
+      else if(ch==3)
+    display();
+      else if(ch==4)
+       cout<<"\nEnd Of program";
+  }while(ch!=4);
+}
+//to push elements in a stack
+void push()
+{
+  if(top>9)
+    cout<<"\nStack Overflow";
+  else
+  {   top=top+1;
+      cout<<"\nEnter a value : ";
+      cin>>stack[top];
+  }
+
+}
+
+//to pop/delete stack elements
+void pop()
+{
+  if(top==-1)
+   cout<<"\nStack Overflow. No Elements to pop";
+  else
+  {
+      cout<<stack[top]<<" is deleted..";
+      top--;
+  }
+}
+
+//displaying stack elements
+void display()
+{
+    int i;
+    if(top==-1)
+      cout<<"\nStack underflow. No elements to display..";
+    else
+    {
+    cout<<"\nThe stack elements are : ";
+    for(i=0;i<=top;i++)
+    {
+      cout<<"\t"<<stack[i];
+    }
+      cout<<"\n";
+
+    }
+}
+
+//circular linked list
+
+#include<iostream.h>
+#include<conio.h>
+#include<malloc.h>
+struct node
+{int info;
+struct node *next;
+}*start, *temp,*current;
+
+void circular(int);
+void circulardisplay();
+
+void main()
+{clrscr();
+start=NULL;
+int item,choice,location,element,position;
+cout<<endl<<"Circular Singly Linked List by-Tarun Rawat\n";
+again:
+
+cout<<"\n1.Insert Item in Circular Linked List\n2.Display circular Linked List \n3.Exit\n";
+cout<<"Enter choice : ";
+cin>>choice;
+switch(choice)
+{case 1:cout<<"Enter item to insert: ";
+       cin>>item;
+       circular(item);
+       goto again;
+case 2:cout<<"\nInserted item = ";
+       circulardisplay();cout<<"\n";
+       goto again;
+case 3:cout<<"\nTHANK YOU";
+default:break;
+}
+getch();
+}
+
+void circular(int item)
+{temp=(node*)malloc(sizeof(node));
+temp->info=item;
+temp->next=start;
+node* current;
+if(start==NULL)
+{start=temp;
+temp->next=start;
+}
+else
+{current=start;
+ while(current->next!=start)
+  {current=current->next;
+  }
+ current->next=temp;
+ }
+}
+
+void circulardisplay()
+{current= start;
+ do{
+ cout<<current->info<<" ";
+ current=current->next;
+ }while(current!=start);
+
+}
+
+
+// linked list insertion and deletion operation
+
+#include<iostream.h>
+#include<conio.h>
+#include<malloc.h>
+struct node
+{int info;
+struct node *next;
+}*start, *temp;
+
+void insert_beg(int);
+void insert_end(int);
+void insert_spe(int,int);
+void delete_beg();
+void delete_end();
+void delete_spe(int);
+void display();
+
+void main()
+{clrscr();
+ start=NULL;
+ int item,choice,location,element,position;
+ cout<<endl<<"Insert & Delete operation in linked list by-Tarun Rawat\n";
+ again:
+ cout<<"\n1.Insert at beg of linked list\t";
+ cout<<"2.Insert at end of linked list\n";
+ cout<<"3.Insert at specific location\t";
+ cout<<"4.Delete from beginning of List \n5.delete from end of the list \t6.Delete from specific location of List\n7.Display linked list\t8.Exit\n";
+ cout<<"Enter choice : ";
+ cin>>choice;
+ switch(choice)
+ {case 1:cout<<"Enter item to insert : ";
+       cin>>item;
+       insert_beg(item);
+       goto again;
+ case 2:cout<<"Enter item to insert : ";
+       cin>>item;
+       insert_end(item);
+       goto again;
+ case 3:cout<<"Enter location to insert : ";
+       cin>>location;
+       cout<<"Enter item to insert : ";
+       cin>>item;
+       insert_spe(item,location);
+       goto again;
+ case 4:delete_beg();
+       goto again;
+ case 5:delete_end();
+       goto again;
+ case 6:cout<<"Enter the location to delete : ";
+       cin>>location;
+       delete_spe(location);
+       goto again;
+ case 7:cout<<"\nInserted item = ";
+       display();
+       goto again;
+ case 8 :cout<<"\nTHANK YOU";
+ default:break;
+ }
+ getch();
+}
+
+void insert_beg(int item)
+{temp=(node*)malloc(sizeof(node));
+temp->info=item;
+temp->next=start;
+start=temp;
+}
+
+void insert_end(int item)
+{temp=(node*)malloc(sizeof(node));
+temp->info=item;
+temp->next=NULL;
+node* current=start;
+while(current->next!=NULL)
+    {current=current->next;
+    }
+current->next=temp;
+}
+
+void insert_spe(int item,int location)
+{temp=(node*)malloc(sizeof(node));
+temp->info=item;
+node* current=start;
+int count=1;
+while (count <location-1)
+    {current=current->next;
+     count=count+1;
+    }
+temp->next=current->next;
+current->next=temp;
+}
+
+void delete_beg()
+{temp=start;
+start=start->next;
+free(temp);
+}
+
+void delete_end()
+{temp=start;
+node* current;
+while(temp->next!=NULL)
+{
+current=temp;
+temp=temp->next;
+}
+current->next=NULL;
+free(temp);
+}
+
+void delete_spe(int location)
+{node* current;
+temp=start;
+int count=1;
+while(count<=location-1)
+{current=temp;
+temp=temp->next;
+count=count+1;
+}
+current->next=temp->next;
+free(temp);
+}
+
+void display()
+{temp=start;
+while(temp!=NULL)
+{cout<<temp->info<<" ";
+temp=temp->next;
+}
+cout<<"\n";
+
+}
+
+//inverse matrix
+
+#include<iostream.h>
+#include<conio.h>
+void main()
+{int a[3][3],i,j;
+ float determinant=0;
+ clrscr();
+ cout<<"Find Inverse Of Matrix by-Tarun Rawat\n";
+ cout<<"Enter elements of 3x3 matrix:\n";
+ for(i=0;i<3;i++)
+ {
+  for(j=0;j<3;j++)
+  {
+   cin>>a[i][j];
+  }
+ }
+ cout<<"\nThe entered matrix is:\n";
+ for(i=0;i<3;i++)
+ {
+  for(j=0;j<3;j++)
+  {
+   cout<<a[i][j]<<"  ";
+  }
+  cout<<"\n";
+ }
+ for(i=0;i<3;i++)
+ {
+  determinant = determinant + (a[0][i]*(a[1][(i+1)%3]*
+  a[2][(i+2)%3] - a[1][(i+2)%3]*a[2][(i+1)%3]));
+ }
+ if(determinant==0)
+ {
+  cout<<"Inverse does not exist (Determinant=0).\n";
+ }
+ else
+ {
+  cout<<"\nInverse of matrix is: \n";
+ }
+ for(i=0;i<3;i++)
+ {
+  for(j=0;j<3;j++)
+  {
+   cout<<(a[(i+1)%3][(j+1)%3] *
+    a[(i+2)%3][(j+2)%3]) - (a[(i+1)%3][(j+2)%3]*
+     a[(i+2)%3][(j+1)%3]))/ determinant<<"\t";
+  }
+  cout<<"\n";
+  }
+
+ getch();
+}
+
+//pattern
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+ 
+Code:     
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+    int i,j,row;
+    clrscr();
+    cout<<"Enter the number of rows you want:\n";
+    cin>>row;
+    for(i=1;i<=row;i++)
+    {
+ for(j=1;j<=i;j++)
+ {
+     cout<<j;
+ }
+ cout<<"\n";
+    }
+    getch();
+} 
+ 
+ 
+ 1
+ 2  3
+ 4  5  6
+ 7  8  9 10
+11 12 13 14 15 
+
+Code:     
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+  int i,j,k,row;
+  clrscr();
+  k=1;
+  cout<<"Enter the no. of rows you want:\n";
+  cin>>row;
+  for(i=1;i<=row;i++)
+  {
+    for(j=row;j>=1;j--)
+    {
+      if(j>i)
+ cout<<" ";
+      else
+ cout<<k++;
+    }
+    cout<<"\n";
+  }
+  getch();
+} 
+ 
+ 
+ 
+1
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
+Code:     
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+    int i,j;
+    clrscr();
+    cout<<"Enter the number of rows you want:\n";
+    cin>>row;
+    for(i=1;i<=row;i++)
+    {
+ for(j=1;j<=i;j++)
+ {
+     cout<<i;
+ }
+ cout<<"\n";
+    }
+  getch();
+} 
+ 
+ 
+1
+2 6
+3 7 10
+4 8 11 13
+5 9 12 14 15
+ 
+Code:     
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+  int i,j,k,row;
+  clrscr();
+  cout<<"Enter the number of rows you want:\n";
+  cin>>row;
+  for(i=1;i<=row;i++)
+  {
+    k = i;
+    for(j=1;j<=i;j++)
+    {
+      cout<<k;
+      k += row-j;
+    }
+    cout<<"\n";
+  }
+ getch();
+} 
+ 
+ 
+    1
+   2 3
+  4 5 6
+ 7 8 910
+1112131415
+ 
+ 
+Code:     
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+  int i,j,k,row;
+  clrscr();
+  k=1;
+  cout<<"Enter the no. of rows you want:\n";
+  cin>>row;
+  for(i=1;i<=row;i++)
+  {
+    for(j=row;j>=1;j--)
+    {
+      if(j>i)
+ cout<<" ";
+      else
+ cout<<k++;
+    }
+    cout<<"\n";
+  }
+  getch();
+} 
+ 
+ 
+1
+0 1
+0 0 1
+0 0 0 1
+0 0 0 0 1
+ 
+Code:     
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+ int i,j,row;
+ clrscr();
+ cout<<"Enter the number of rows you want:\n";
+ cin>>row;
+ cout<<"\n";
+ for(i=1;i<=row;i++)
+ {
+  for(j=1;j<=i;j++)
+  {
+   cout<<j/i;
+  }
+  cout<<"\n";
+ }
+ getch();
+}
+ 
+
+*
+**
+***
+****
+*****
+ Code: 
+#include<iostream.h>
+#include<conio.h>
+ 
+void main()
+{int row,i,j;
+ clrscr();
+ cout<<"Enter the number of rows you want: \n";
+ cout<<row;
+ for(i=1;i<=row;i++)
+ {
+  for(j=1;j<=i;j++)
+  {
+   cout<<"* ";
+  }
+  cout<<"\n";
+ }
+ getch();
+} 
+    *
+   **
+  ***
+ ****
+*****
+ Code:          
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+ int i, j, k, row;
+ clrscr();
+ cout<<"Enter the number of rows you want:\n";
+ cin>>row;
+ for(i=row;i>=1;i--)
+ {
+  for(j=1;j<i;j++)
+  {
+   cout<<" ";
+  }
+  for(k=row;k>=i;k--)
+  {
+   cout<<"*";
+  }
+  cout<<"\n";
+ }
+ getch();
+}
+ 
+ 
+*****
+****
+***
+**
+* 
+ Code:          
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+ int i, j, k, row;
+ clrscr();
+ cout<<"Enter the number of rows you want:\n";
+ cin>>row;
+ for(i=row;i>=1;i--)
+ {
+  for(j=row;j>i;j--)
+  {
+   cout<<" ";
+  }
+  for(k=1;k<=i;k++)
+  {
+   cout<<"*";
+  }
+  cout<<"\n";
+ }
+ getch();
+} 
+ 
+ 
+    *
+   *** 
+  *****
+ *******
+********* 
+ Code:          
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+ int i,j,k,row;
+ clrscr();
+ cout<<"Enter the number of rows you want:\n";
+ cin>>row;
+ for(i=1;i<=row;i++)
+ {
+  for(j=i;j<row;j++)
+  {
+   cout<<" ";
+  }
+  for(k=1;k<(i*2);k++)
+  {
+   cout<<"*";
+  }
+  cout<<"\n";
+ }
+ getch();
+} 
+ 
+ 
+*********
+ *******
+  ***** 
+   ***   
+    *
+ Code:              
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+ int i,j,k,row;
+ clrscr();
+ cout<<"Enter the number of rows you want:\n";
+ cin>>row;
+ for(i=row;i>=1;i--)
+ {
+  for(j=row;j>i;j--)
+  {
+   cout<<" ";
+  }
+  for(k=1;k<(i*2);k++)
+  {
+   cout<<"*";
+  }
+  cout<<"\n";
+ }
+ getch();
+} 
+ 
+ 
+**********
+****  **** 
+***    ***
+**      **
+*        *
+ Code:          
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+ int row,i,j;
+ clrscr();
+ cout<<"Enter the number of rows you want: \n";
+ cin>>row;
+ for(i=row;i>=1;i--)
+ {
+  for(j=1;j<=i;j++)
+  {
+   cout<<"*";
+  }
+ for(j=row;j>=1;j--)
+    {
+      if(j<=i)
+      {
+    cout<<"*";
+      }
+      else
+      {
+    cout<<"  ";
+      }
+    } 
+  cout<<"\n";
+ }
+ getch();
+} 
+ 
+ 
+*        *
+**      **
+***    ***
+****  ****
+**********
+ Code:          
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+  int i,j,k,row;
+  clrscr();
+  cout<<"Enter the number of rows you want:\n";
+  cin>>row;
+  cout<<"\n";
+  for(i=1;i<=row;i++)
+  {
+    for(j=1;j<=row;j++)
+    {
+      if(j<=i)
+   {
+       cout<<"*";
+      }
+      else
+   {
+       cout<<" ";
+      } 
+    }
+    for(j=row;j>=1;j--)
+    {
+      if(j<=i)
+   {
+       cout<<"*";
+      }
+      else
+   {
+       cout<<" ";
+      }
+    }
+    cout<<"\n";
+  }
+  getch();
+}
+ 
+ 
+    *
+   *** 
+  *****
+ *******
+*********
+ *******
+  *****
+   ***   
+    *  
+ 
+Code:          
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+ int i,j,k;
+ clrscr();
+ for(i=1;i<=5;i++)
+ {
+  for(j=i;j<5;j++)
+  {
+   cout<<" ";
+  }
+  for(k=1;k<(i*2);k++)
+  {
+   cout<<"*";
+  }
+   cout<<"\n";
+ }
+ for(i=4;i>=1;i--)
+ {
+  for(j=5;j>i;j--)
+  {
+   cout<<" ";
+  }
+  for(k=1;k<(i*2);k++)
+  {
+   cout<<"*";
+  }
+  cout<<"\n";
+ }
+ getch();
+} 
+ 
+ 
+ 
+**********
+****  ****
+***    ***
+**      **
+*        *
+**      **
+***    ***
+****  ****
+**********
+ Code:          
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+ int i,j,k;
+ clrscr();
+ for(i=1;i<=5;i++)
+ {
+  for(j=1;j<=6-i;j++)
+  {
+   cout<<"*";
+  }
+  for(k=1;k<i;k++)
+  {
+   cout<<"  ";
+  }
+  for(j=1;j<=6-i;j++)
+  {
+   cout<<"*";
+  }
+  cout<<"\n";
+ }
+  for(i=2;i<=5;i++)
+ {
+  for(j=1;j<=i;j++)
+     cout<<"*";
+  for(k=1;k<=5-i;k++)
+  {
+   cout<<"  ";
+  }
+  for(j=1;j<=i;j++)
+  {
+  cout<<"*";
+  }
+  cout<<"\n";
+ }
+ getch();
+}
+ // fibonnacci series
+#include<iostream.h>
+#include<conio.h>
+void main()
+{ clrscr();
+   int a=0,b=1,c;
+   cout<<"Fibonacci Series Output (by: Tarun Rawat)\n\n";
+   cout<<"Series :- "<<a<<" "<<b;
+   for(int i=0;i<=15;i++)
+     {c=a+b;
+      cout<<" "<<c;
+      a=b;
+      b=c;
+     }
+getch();
+}
+//linear array operation
+
+#include<iostream.h>
+#include<conio.h>
+void traversing (int*,int);
+void searching  (int*,int,int);
+void insertion  (int*,int,int,int);
+int  deletion   (int*,int,int);
+void main()
+{ clrscr();
+  int array[30],choice,location,item,i,length,position;
+  cout<<"Program for Operation of Array by-Tarun Rawat \n";
+  cout<<"\nEnter length of array : ";
+  cin>>length;
+  cout<<"Enter element of array \n";
+  for(i=0;i<=length-1;i++)
+     { cin>>array[i];
+     }
+  again:
+  cout<<"Travers= 1\nSearch = 2\nInsert = 3\nDelete = 4\nExit   = 5 \n";
+  cout<<"Enter choice: ";
+  cin>>choice;
+  switch(choice)
+        { case 1:       traversing(array,length);
+          break;
+   case 2:       searching(array,item,length);
+          break;
+   case 3:       cout<<"Enter Item and Position to add \n";
+          cin>>item>>position;
+          insertion(array,length,item,position);
+          for(i=0;i<=length;i++)
+          {cout<<array[i]<<endl;
+          }
+          break;
+   case 4:       cout<<"Enter position to delete \n";
+          cin>>position;
+          length =deletion(array,length,position);
+          cout<<"New array after delete \n";
+          for(i=0;i<length;i++)
+      {cout<<array[i]<<"\n";}
+          break;
+   case 5:       break;
+   default:       cout<<"wrong value\n";
+    goto again;
+        }
+getch();
+}
+
+void traversing(int array[],int length)
+       {  for(int i=0;i<=length-1;i++)
+      {cout<<array[i]<<"  ";}
+       }
+
+void searching(int array[],int item,int length)
+      { int i;
+        cout<<"\nEnter item to search \n";
+        cin>>item;
+        int location =-1;
+        for( i=0;i<=length-1;i++)
+   { if ( array[i]==item)
+        { location=i;
+        }
+   }
+   if (location==-1)
+        {cout<<"\nItem not found ";
+         }
+   else{cout<<" \nItem is present at (index value): "<<location;
+       }
+      }
+
+void insertion(int array[],int length,int item,int position)
+      { int j=length-1;
+        while(j>=position)
+      {  array[j+1]=array[j];
+        j=j-1;
+      }
+      array[position]=item;
+      length=length+1;
+      }
+
+int deletion(int array[],int length,int position)
+     {
+        while(position<length)
+     { array[position]=array[position+1];
+       position=position+1;
+     }
+        length=length-1;
+        return length;
+
+      }
+//convert uupercase to lowercase string and viceversa
+#include<iostream.h>
+#include<string.h>
+#include<conio.h>
+void main()
+{ clrscr();
+  char str1[30],temp[30];
+  cout<<"Convert Lower to Upper case & Vice versa by-Tarun Rawat\n";
+  cout << "Enter the string: ";
+  cin >> str1;
+  strcpy(temp,str1);
+  cout<<"Upper Case String "<<strupr(temp) ;
+  cout<<"\nLower Case String "<<strlwr(temp) ;
+getch();
+}
+//ascii code 
+#include <iostream.h>
+#include<conio.h>
+void main()
+{       clrscr();
+ char ascii;
+ cout << "Give character: ";
+ cin >> ascii;
+ cout << "Its ascii value is: "<< (int) ascii ;
+ cout<< "\n Created bt Tarun Rawat " ;
+       getch();
